@@ -10,6 +10,9 @@ module.exports = {
         lightBlue: "#90E0EF",
         thinBlue: "#CAF0F8",
       },
+      fontFamily: {
+        parkinsans: ["Parkinsans", "sans-serif"],
+      }
     },
   },
   plugins: [],
