@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full w-full m-0 p-0 bg-gray-300">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    <h1>Register</h1>
-    <form action="/api/users/register" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">Register</button>
-    </form>
+<body class="flex flex-col h-full items-center justify-center">
+    <section class="border-4 border-solid border-black rounded-2xl text-center p-10 flex flex-col bg-white">
+        <h1 class="font-bold uppercase mb-8">Register</h1>
+        <form action="/api/users/register" method="POST" class="flex flex-col gap-2">
+            <label for="username">Username:</label>
+            <input class="border-solid border-black border-2 rounded-xl text-center" type="text" id="username" name="username" required>
+            <br>
+            <label for="email">Email:</label>
+            <input class="border-solid border-black border-2 rounded-xl text-center" type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input class="border-solid border-black border-2 rounded-xl text-center" type="password" id="password" name="password" required>
+            <br>
+            <button class="bg-lightBlue rounded-2xl py-2 hover:bg-skyBlue" type="submit">Register</button>
+        </form>
+        <a href="/" target="_blank" class="italic font-thin mt-6 hover:text-oceanBlue">Do you already have an account ? </a>
+    </section>
 </body>
 </html>
