@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="bg-gray-200 h-full w-full font-parkinsans p-0 m-0" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Create a new list</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>
+        <header class="bg-white w-full flex">
+            <div class="flex p-4 items-center w-full gap-8">
+                <a href="/" class="font-bold text-5xl text-oceanBlue md:text-4xl">SmartQuiz</a>
+                <a href="/create" class="hover:text-oceanBlue font-bold">Create a list</a>
+                <a href="/" class="hover:text-oceanBlue font-bold mr-auto text-center">See all list</a>
+                <a href="/register" class="ml-auto mr-2 hover:text-oceanBlue font-bold"> Register</a>
+                <a href="/login" class="mr-4 hover:text-oceanBlue font-bold">Login</a>
+            </div>
+        </header>
+
+        <main class="flex flex-col items-center justify-center w-full h-full">
+            <h1 class="font-bold text-4xl text-center mt-6">Create/Edit a new list</h1>
+
+            <form action="/api/mylists" method="POST" class="bg-white p-6 rounded-xl shadow-md w-4/12 flex flex-col gap-4 mt-10 border-4 border-black border-solid">
+
+
+                <label for="name" class="font-medium">Name of the list:</label>
+                <input type="text" id="name" name="name" class="border border-gray-300 rounded p-2" placeholder="Enter list name" required>
+
+                <div id="content-container" class="flex flex-col gap-2 mt-4 w-full">
+                    <h3 class="font-medium">Content:</h3>
+
+                    <div class="flex gap-2 flex-row w-full">
+                        <input type="text" name="content[0][key]" class="flex-1 border border-gray-300 rounded p-2" placeholder="Word" required>
+                        <input type="text" name="content[0][value]" class="flex-1 border border-gray-300 rounded p-2" placeholder="Definition">
+                    </div>
+                </div>
+
+                <button type="button" id="add-content" class="bg-lightBlue rounded-2xl py-2 hover:bg-skyBlue mt-4">Add to the list</button>
+
+                <button type="submit" class="bg-lightBlue rounded-2xl py-2 hover:bg-skyBlue">Create List</button>
+            </form>
+        </main>
+        </main>
+
+    </body>
+</html>

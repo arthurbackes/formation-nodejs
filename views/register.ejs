@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full w-full m-0 p-0 bg-gray-300 font-parkinsans ">
+<html lang="en" class="h-full w-full m-0 p-0 bg-gray-200 font-parkinsans ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body class="flex flex-col h-full">
-    <header class="bg-white w-full ">
-        <div class="flex p-4 items-center w-full">
-            <a href="/" class="font-bold text-4xl text-oceanBlue">SmartQuiz</a>
-            <a href="/register" class="ml-auto mr-6 hover:text-oceanBlue"> Register</a>
-            <a href="/login" class="mr-4 hover:text-oceanBlue">Login</a>
+
+    <header class="bg-white w-full flex">
+        <div class="flex p-4 items-center w-full gap-8">
+            <a href="/" class="font-bold text-5xl text-oceanBlue md:text-4xl">SmartQuiz</a>
+            <a href="/create" class="hover:text-oceanBlue font-bold">Create a list</a>
+            <a href="/" class="hover:text-oceanBlue font-bold mr-auto text-center">See all list</a>
+            <a href="/register" class="ml-auto mr-2 hover:text-oceanBlue font-bold"> Register</a>
+            <a href="/login" class="mr-4 hover:text-oceanBlue font-bold">Login</a>
         </div>
     </header>
+
     <section class="flex flex-col justify-center items-center h-full">
         <div class="bg-white border-4 border-solid border-black rounded-2xl p-10 ">
             <h1 class="font-bold uppercase mb-8 text-center text-xl">Register</h1>
@@ -29,7 +34,7 @@
                 <br>
                 <button class="bg-lightBlue rounded-2xl py-2 hover:bg-skyBlue" type="submit">Register</button>
             </form>
-            <a href="/login" target="_blank" class="italic font-thin mt-6 hover:text-oceanBlue">Do you already have an account ? </a>
+            <a href="/login" class="italic font-thin mt-6 hover:text-oceanBlue">Do you already have an account ? </a>
         </div>
     </section>
 </body>

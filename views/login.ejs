@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full w-full m-0 p-0 bg-gray-300 font-parkinsans">
+<html lang="en" class="h-full w-full m-0 p-0 bg-gray-200 font-parkinsans">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,29 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="flex flex-col h-full">
-<header class="bg-white w-full">
-    <div class="flex p-4 items-center w-full">
-        <a href="/" class="font-bold text-4xl text-oceanBlue">SmartQuiz</a>
-        <a href="/register" class="ml-auto mr-6 hover:text-oceanBlue"> Register</a>
-        <a href="/login" class="mr-4 hover:text-oceanBlue">Login</a>
-    </div>
-</header>
-<section class="flex flex-col justify-center items-center h-full">
-    <div class="bg-white border-4 border-solid border-black rounded-2xl p-10">
-        <h1 class="font-bold uppercase mb-8 text-center text-xl">Login</h1>
-        <form action="/api/users/login" method="POST" class="flex flex-col gap-2">
-            <label for="username">Username:</label>
-            <input class="border-solid border-black border-2 rounded-xl text-center" type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input class="border-solid border-black border-2 rounded-xl text-center" type="password" id="password" name="password" required>
-            <br>
-            <button class="bg-lightBlue rounded-2xl py-2 hover:bg-skyBlue" type="submit">Login</button>
-        </form>
-        <a href="/register" class="italic font-thin pt-10 hover:text-oceanBlue ">Don't have an account? Register here.</a>
-    </div>
-</section>
+    <header class="bg-white w-full flex">
+        <div class="flex p-4 items-center w-full gap-8">
+            <a href="/" class="font-bold text-5xl text-oceanBlue md:text-4xl">SmartQuiz</a>
+            <a href="/create" class="hover:text-oceanBlue font-bold">Create a list</a>
+            <a href="/" class="hover:text-oceanBlue font-bold mr-auto text-center">See all list</a>
+            <a href="/register" class="ml-auto mr-2 hover:text-oceanBlue font-bold"> Register</a>
+            <a href="/login" class="mr-4 hover:text-oceanBlue font-bold">Login</a>
+        </div>
+    </header>
+    <section class="flex flex-col justify-center items-center h-full">
+        <div class="bg-white border-4 border-solid border-black rounded-2xl p-10">
+            <h1 class="font-bold uppercase mb-8 text-center text-xl">Login</h1>
+            <form action="/api/users/login" method="POST" class="flex flex-col gap-2">
+                <label for="email">Email:</label>
+                <input class="border-solid border-black border-2 rounded-xl text-center" type="text" id="email" name="email" required>
+                <br>
+                <label for="password">Password:</label>
+                <input class="border-solid border-black border-2 rounded-xl text-center" type="password" id="password" name="password" required>
+                <br>
+                <button class="bg-lightBlue rounded-2xl py-2 hover:bg-skyBlue" type="submit">Login</button>
+            </form>
+            <a href="/register" class="italic font-thin hover:text-oceanBlue ">Don't have an account? Register here.</a>
+        </div>
+    </section>
 </body>
 </html>
