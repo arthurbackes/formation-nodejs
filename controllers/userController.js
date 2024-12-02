@@ -26,12 +26,12 @@ const registerUser = asyncHandler(async (req, res) => {
     });
     console.log(`User created : ${user}`);
     if (user) {
-        res.status(201).json({_id: user.id, email: user.email});
+        res.status(201).redirect("/")
     } else {
         res.status(400);
         throw new Error("User data not valid")
     }
-    res.json({ message: "Register the user"})
+    res.redirect("./");
 });
 
 //@desc Login user

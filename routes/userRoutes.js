@@ -4,7 +4,7 @@ const validateToken = require("../middleware/validateTokenHandler");
 const router = express.Router();
 
 router.get("/register", (req, res) => {
-    res.render("register", {title: "Register"})
+    res.render("register", {title: "Register"});
 });
 
 router.post("/register", registerUser);
