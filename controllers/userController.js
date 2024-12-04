@@ -57,6 +57,7 @@ const loginUser = asyncHandler(async (req, res) => {
                 
                 
             )
+        localStorage.setItem("Token", accessToken);
         res.status(200).json({accessToken});
     } else {
         res.status(401)
